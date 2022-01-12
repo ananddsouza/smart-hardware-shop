@@ -31,7 +31,7 @@
                 <div class="item-content">
                     <div>{{cartItem.name}}
                     </div>
-                    <button class="remove-item-button" mat-stroked-button color="primary" (click)="removeCartItem(cartItem)">
+                    <button matTooltip="Remove this Item" class="remove-item-button" mat-stroked-button color="primary" (click)="removeCartItem(cartItem)">
                         <mat-icon>delete</mat-icon></button>
                 </div>
             </div>
@@ -41,7 +41,7 @@
 
                 <mat-form-field>
                     <!-- Decrement Quantity-->
-                    <button matTooltip="Remove this Item" mat-button mat-icon-button matPrefix aria-label="Remove" [color]="getColor()" (click)="changeValue(decrementValue,cartItem)">
+                    <button mat-button mat-icon-button matPrefix aria-label="Remove" [color]="getColor()" (click)="changeValue(decrementValue,cartItem)">
                         <mat-icon>remove</mat-icon>
                     </button>
 
