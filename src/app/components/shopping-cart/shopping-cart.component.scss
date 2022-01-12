@@ -1,0 +1,31 @@
+.shopping-cart-container {
+    padding: 5%;
+}
+
+.text-title-cart {
+    justify-content: center;
+    text-align: center;
+    font-family: var(--apple-system);
+    font-size: 1.5em;
+}
+
+.button-checkout {
+    float: right;
+}
+
+.button-empty-cart {
+    padding: 1%;
+    float: left;
+}
+
+.text-total-amount {
+    font-family: var(--apple-system);
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.text-total-amount-value {
+    font-family: var(--apple-system);
+    font-size: 1.2em;
+    font-weight: bold;
+}

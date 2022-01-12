@@ -1,0 +1,64 @@
+.header-content {
+    justify-content: center;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.example-spacer {
+    width: 5px;
+}
+
+.content {
+    margin-top: 10%;
+}
+
+.store-title {
+    font-family: var(--apple-system);
+    font-size: 1em;
+}
+
+.page-content {
+    display: flex;
+    width: 100%;
+}
+
+.product-container-section {
+    height: 90vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.main-container {
+    min-height: 100vh;
+}
+
+// Custom Scroll bar properties
+
+/* width */
+
+::-webkit-scrollbar {
+    width: 3px;
+}
+
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px white;
+    border-radius: 10px;
+}
+
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background: lightgray;
+    border-radius: 5px;
+}
+
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+    background: grey;
+}

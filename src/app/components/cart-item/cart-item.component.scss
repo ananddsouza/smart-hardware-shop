@@ -1,0 +1,54 @@
+.slider-quantity {
+    width: 70%;
+}
+
+.field-quantity {
+    width: 100%;
+}
+
+.item-content {
+    display: block;
+    padding: 1px;
+    font-family: var(--apple-system);
+    font-size: 1em;
+    align-items: center;
+}
+
+.cart-items-header {
+    font-family: var(--apple-system);
+    font-size: 1.1em;
+}
+
+.item-quantity {
+    font-family: var(--apple-system);
+    font-size: 1em;
+}
+
+.item-price {
+    font-family: var(--apple-system);
+    font-size: 1em;
+}
+
+.cart-items-container {
+    padding-top: 2%;
+}
+
+.cart-item {
+    margin: 2% !important;
+    align-items: start;
+}
+
+mat-form-field {
+    width: 65%;
+    text-align: center;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    display: none;
+}
+
+.remove-item-button {
+    margin-top: 1%;
+    text-align: center;
+}

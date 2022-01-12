@@ -1,0 +1,65 @@
+<!-- Cart Item Content-->
+<div>
+
+    <!-- Cart Item Headers Layout-->
+    <div fxLayout="row wrap" fxLayoutGap="15px grid">
+
+        <!-- Cart Item Header-->
+        <div fxFlex="40%" fxFlex.xs="33%" fxFlex.sm="33%">
+            <div class="cart-items-header">Cart Items</div>
+        </div>
+
+        <!-- Quantity Header-->
+        <div fxFlex="30%" fxFlex.xs="33%" fxFlex.sm="33%">
+            <div class="cart-items-header">Quantity</div>
+        </div>
+
+        <!-- Price Header-->
+        <div fxFlex="30%" fxFlex.xs="33%" fxFlex.sm="33%">
+            <div class="cart-items-header"> Price</div>
+        </div>
+    </div>
+
+    <!-- Cart Details Container-->
+    <div class="cart-items-container">
+
+        <!--Cart Items Layout-->
+        <div fxLayout="row wrap" fxLayoutGap="16px grid" class="cart-item" *ngFor="let cartItem of cartItems">
+
+            <!-- Cart Item Name (Also handles remove cart item) -->
+            <div fxFlex="40%" fxFlex.xs="33%" fxFlex.sm="33%">
+                <div class="item-content">
+                    <div>{{cartItem.name}}
+                    </div>
+                    <button class="remove-item-button" mat-stroked-button color="primary" (click)="removeCartItem(cartItem)">
+                        <mat-icon>delete</mat-icon></button>
+                </div>
+            </div>
+
+            <!-- Cart Item Quantity (Handles increment and decrement of cart item quantity) -->
+            <div fxFlex="30%" fxFlex.xs="33%" fxFlex.sm="33%">
+
+                <mat-form-field>
+                    <!-- Decrement Quantity-->
+                    <button matTooltip="Remove this Item" mat-button mat-icon-button matPrefix aria-label="Remove" [color]="getColor()" (click)="changeValue(decrementValue,cartItem)">
+                        <mat-icon>remove</mat-icon>
+                    </button>
+
+                    <!-- Quantity of cart item-->
+                    <input matInput type="number" appearance="none" [min]="min" [ngModel]="cartItem.count" (input)="onInputValueChange($event,cartItem)" value={{defaultValue}} (focus)="setColorAndQuantity('primary',cartItem)" (blur)="setColorAndQuantity('default', cartItem)"
+                    />
+
+                    <!-- Increment Quantity-->
+                    <button mat-button mat-icon-button matSuffix aria-label="Add" [color]="getColor()" (click)="changeValue(incrementValue,cartItem)">
+                        <mat-icon>add</mat-icon>
+                    </button>
+                </mat-form-field>
+            </div>
+
+            <!-- Cart Item Value-->
+            <div fxFlex="30%" fxFlex.xs="33%" fxFlex.sm="33%">
+                <div class="item-price">{{cartItem.price * cartItem.count | currency }}</div>
+            </div>
+        </div>
+    </div>
+</div>

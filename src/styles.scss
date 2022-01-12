@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+
+// Theming 
+@import "../node_modules/@angular/material/prebuilt-themes/indigo-pink.css";
+// Global CSS variables
+:root {
+    --apple-system: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+// Properties
+body,
+html {
+    height: 100%;
+    margin: 0;
+}

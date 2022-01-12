@@ -1,0 +1,34 @@
+.card-content {
+    justify-content: center;
+}
+
+.card {
+    justify-content: center;
+}
+
+.mat-card img {
+    object-fit: cover;
+    width: 100%;
+    padding: 1%;
+    height: 80%;
+}
+
+.card-title {
+    font-family: var(--apple-system);
+    font-size: 1.2em;
+}
+
+.card-description {
+    font-family: var(--apple-system);
+    font-size: 1.2em;
+}
+
+.card-details {
+    font-family: var(--apple-system);
+    font-size: 1em;
+}
+
+.add-to-cart {
+    font-family: var(--apple-system);
+    font-size: 1em;
+}

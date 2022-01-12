@@ -1,0 +1,46 @@
+<!-- Shopping Cart Container-->
+<div class="shopping-cart-container">
+
+    <!-- Title -->
+    <div class="text-title-cart">Shopping Cart</div>
+
+    <div class="empty-cart" *ngIf="isEmptyCart">
+        <div>Cart Empty</div>
+    </div>
+
+    <div>
+        <hr>
+        <!-- Cart Item List -->
+        <mat-list role="list">
+
+            <!-- App Cart Item-->
+            <app-cart-item [cartData]="cartData" (totalCartValue)="totalCartValue($event)">
+            </app-cart-item>
+        </mat-list>
+        <hr>
+
+        <!-- Total Cart Value Container-->
+        <div>
+            <div fxLayout="row wrap" fxLayoutGap="15px grid">
+
+                <!-- Text - Total Amount-->
+                <div fxFlex="40%" fxFlex.xs="33%" fxFlex.sm="33%">
+                    <div class="text-total-amount">Total Cart Value</div>
+                </div>
+
+                <!-- Empty Spacer-->
+                <div fxFlex="30%" fxFlex.xs="33%" fxFlex.sm="33%">
+                </div>
+
+                <!-- Total Cart Value (calculated)-->
+                <div fxFlex="30%" fxFlex.xs="33%" fxFlex.sm="33%">
+                    <div class="text-total-amount-value"> {{totalAmount | currency}}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Checkout Button-->
+        <button class="button-checkout" mat-raised-button color="primary">Checkout</button>
+    </div>
+</div>

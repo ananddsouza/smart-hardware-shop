@@ -1,0 +1,21 @@
+<!--Search Form-->
+<form class="search-form">
+
+    <!-- Search box Container-->
+    <mat-form-field class="field-full-width" appearance="outline">
+
+        <!-- Search Icon-->
+        <mat-icon matPrefix>search</mat-icon>
+
+        <!--Search Input-->
+        <input type="text" placeholder="Search" matInput [formControl]="searchFormControl" [matAutocomplete]="auto">
+
+        <!-- Autocomplete Search field-->
+        <mat-autocomplete #auto="matAutocomplete">
+            <mat-option *ngFor="let product of filteredProducts | async" [value]="product.name" (onSelectionChange)="getSelectedProduct(product)">
+                {{product.name}}
+            </mat-option>
+        </mat-autocomplete>
+
+    </mat-form-field>
+</form>

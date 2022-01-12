@@ -1,0 +1,31 @@
+<div class="main-container">
+    <!-- Material Toolbar -->
+    <mat-toolbar color="primary">
+
+        <!-- Toolbar Row-->
+        <mat-toolbar-row class="header-content">
+
+            <div class="store-title">Smart Hardware Shop</div>
+
+        </mat-toolbar-row>
+    </mat-toolbar>
+
+    <!-- Page Content -->
+
+    <div fxLayout="row wrap" class="page-content" fxLayoutGap="grid">
+
+        <!-- Product Container -->
+        <div class="product-container-section" fxFlex="66%" fxFlex.xs="100%" fxFlex.sm="100%">
+            <app-product-container></app-product-container>
+        </div>
+
+        <!-- Shopping Cart -->
+        <div fxFlex="33%" fxFlex.xs="100%" fxFlex.sm="100%">
+            <app-shopping-cart></app-shopping-cart>
+        </div>
+    </div>
+</div>
+
+
+
+<router-outlet></router-outlet>

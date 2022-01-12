@@ -1,0 +1,31 @@
+<!-- Product Container -->
+<div fxLayout="row wrap" fxLayoutGap="15px grid">
+
+    <!-- Product Layout -->
+    <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let product of products">
+
+        <!-- Product Information Card-->
+        <mat-card class="card">
+
+            <!-- Product Title-->
+            <mat-card-title class="card-title">{{ product.name }}</mat-card-title>
+
+            <!-- Product Image-->
+            <img mat-card-image src={{product.imageUrl}} alt="Photo of Product">
+
+            <!-- Product Description or details -->
+            <mat-card-content class="card-content">
+                <div class="card-description">
+                    {{ product.name }}
+                </div>
+            </mat-card-content>
+
+            <!-- Actions -->
+            <mat-card-actions>
+                <button mat-button class="card-details">Price - {{product.price | currency}}</button>
+                <button mat-raised-button class="add-to" color="primary" (click)="addItemToCart(product)">Add to Cart</button>
+            </mat-card-actions>
+
+        </mat-card>
+    </div>
+</div>
